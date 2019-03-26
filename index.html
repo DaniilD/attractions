@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Достопримечательности Екатеринбурга</title>
+	<link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/onepage-scroll.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="scroll-main">
+		<section class="main" data-rellax-speed="5" >
+			<div class="slider">
+				<img src="img/img-1.jpeg" alt="">
+				<img src="img/P1030881.JPG" alt="">
+				<img src="img/img-3.JPG" alt="">
+				<img src="img/img-4.jpg" alt="">
+				<img src="img/img-5.jpg" alt="">	
+			</div>
+			<div class="main-title">
+				<div class="title">
+					<img src="img/gerb.png" alt="" class="gerb">
+					<div class="text">Достопримечательности Екатеринбурга</div> 
+				</div>
+				<div class="main-arrow">
+					<div class="arrow">
+						<img src="img/arrows-16px-1_tail-down.png" alt="">
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- /.main -->
+
+		<section class="map">
+			<div class="map-img">
+				<img src="img/map.png" alt="">
+
+				<div class="map-item" style="top:500px; left:700px;">
+					<div class="item-container">
+						<div class="picture">
+							<img src="img/attractions/img-2.jpg" alt="">
+						</div>
+						<div class="item-info">
+							<div class="info-title">
+								Дендропарк
+							</div>
+							<div class="info-content">
+								Дендрологический парк на 8 Марта является одной из двух частей Екатеринбургского дендропарка, относящихся к муниципальной службе города. Зеленая зона с традиционными и экзотическими для региона насаждениями находится в центре мегаполиса между улицами 8 Марта, Радищева и Куйбышева. Фасадная часть с главным входом расположены напротив торгово-развлекательного комплекса «Гринвич», одна из боковых сторон парка обращена к зданию Екатеринбургского цирка, а тыльная часть выходит к берегу реки Исеть.
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="map-item" style="top:250px; left:820px;">
+					<div class="item-container">
+						<div class="picture">
+							<img src="img/attractions/img-5.jpg" alt="">
+						</div>
+						<div class="item-info">
+							<div class="info-title">
+								Храм на Крови
+							</div>
+							<div class="info-content">
+								Екатеринбургский Храм-на-Крови во имя Всех святых в земле Российской просиявших является одной из главных достопримечательностей города. Район Вознесенской горки стал печально известным на весь мир. Именно здесь до 1977 года стоял дом инженера Николая Николаевича Ипатьева, в котором были расстреляны последний российский император Николай II со своей семьей и слугами.
+								Из-за этого события, произошедшего в ночь с 16 на 17 июля 1918 года, храм получил такое название. Храм-на-Крови посещают не только верующие прихожане, но и туристические группы. Чаще всего именно его включают в состав обзорной экскурсии по городу. Он считает одним из популярнейших храмов в стране. Екатеринбургский Храм стал третьим «храмом-на-крови» после Углича и Санкт-Петербурга.
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="map-item" style="top:280px; left:680px;">
+					<div class="item-container">
+						<div class="picture">
+							<img src="img/attractions/img-4.jpg" alt="">
+						</div>
+						<div class="item-info">
+							<div class="info-title">
+								Президентский центр Бориса Ельцина 
+							</div>
+							<div class="info-content">
+								Общественный, культурный и образовательный центр, открытый в Екатеринбурге в 2015 году под эгидой одноимённого фонда[2] рядом с кварталом Екатеринбург-Сити. Спроектирован архитектурным бюро BERNASKONI во главе с Борисом Бернаскони.
+								Одним из основных объектов центра является Музей Бориса Ельцина, посвящённый современной политической истории России и культу личности первого президента России. Также в центре функционируют арт-галерея, кино-конференц зал, книжный магазин, кафе, архив, библиотека, парк научных развлечений, коворкинг и прочие организации. На площадках центра регулярно проводятся лекции, концерты, выставки, фестивали и различные общественные мероприятия. В кинозале ведёт работу центр документального кино. 
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+		<!-- /.map -->
+	</div>
+	<!-- /.main -->
+
+
+	<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="js/jquery.onepage-scroll.min.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('.item-info').hide();
+			console.log("ok 1");
+			$('.slider').slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				dots:false,
+				arrows:false,
+				autoplay: true,
+				autoplaySpeed:3000,
+				centerMode:false,
+				centerPadding:'0px',
+				draggable:false,
+				pauseOnFocus:false,
+				pauseOnHover:false,
+				touchMove:false,
+				zIndex:1
+
+			});
+
+			$(".scroll-main").onepage_scroll(); 
+			$(".arrow").on('click',function(){
+				$(".scroll-main").moveDown();
+			});
+
+			$('.picture').mouseenter(function(){
+				$(this).next().fadeIn();
+			});
+			$('.picture').mouseleave(function(){
+				$(this).next().fadeOut();
+			});
+		});
+	</script>			
+</body>
+</html>
